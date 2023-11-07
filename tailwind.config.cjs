@@ -11,7 +11,8 @@ const config = {
 	plugins: [require('@tailwindcss/typography'), require('daisyui')],
 
 	daisyui: {
-		themes: ['light', 'dark']
+		themes: ['light', 'dark'],
+		logs: true
 	}
 };
 

@@ -20,12 +20,12 @@
 	{#if loading}
 		<span class="loading loading-dots loading-lg" />
 	{:else}
-		<div class="px-2 w-full sm:w-4/5 md:w-3/5">
+		<div class="flex flex-col gap-1 px-2 w-full sm:w-4/5 md:w-3/5">
 			{#if todos.size === 0}
 				<p class="text-center">nothing here :/</p>
 			{:else}
-				{#each [...todos] as [key, value]}
-					<Todo bind:todos {key} {value} />
+				{#each [...todos] as [key, value], index}
+					<Todo bind:todos {key} {value} {index} />
 				{/each}
 			{/if}
 		</div>
